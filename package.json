@@ -4,6 +4,7 @@
   "license": "mit",
   "scripts": {
     "mask": "npx tsx app/masks/build.ts",
+    "preinstall": "corepack enable"
     "mask:watch": "npx watch \"yarn mask\" app/masks",
     "dev": "concurrently -r \"yarn run mask:watch\" \"next dev\"",
     "build": "yarn mask && cross-env BUILD_MODE=standalone next build",
